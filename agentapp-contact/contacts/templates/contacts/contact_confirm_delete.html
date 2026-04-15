@@ -1,0 +1,29 @@
+{% extends "contacts/base.html" %}
+{% block title %}Kaydı sil{% endblock %}
+{% block content %}
+  <nav aria-label="breadcrumb" class="mb-3">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'contacts:list' %}">Liste</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Sil</li>
+    </ol>
+  </nav>
+
+  <div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+      <div class="card border-danger shadow-sm">
+        <div class="card-header bg-danger text-white">
+          <h1 class="h5 mb-0">Kaydı silmek istediğinize emin misiniz?</h1>
+        </div>
+        <div class="card-body">
+          <p class="mb-2"><strong>{{ object.name }}</strong> — {{ object.subject }}</p>
+          <p class="text-muted small mb-0">Bu işlem geri alınamaz.</p>
+          <form method="post" class="mt-4">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Evet, sil</button>
+            <a href="{% url 'contacts:detail' object.pk %}" class="btn btn-outline-secondary">Vazgeç</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
