@@ -1,0 +1,7 @@
+Model,Best CV R2,Test MAE,Test MSE,Test RMSE,Test R2,Best Params
+Gradient Boosting,0.859650601962997,1.9172064126030648,6.284334853994765,2.506857565557877,0.9143050503714516,"{'subsample': 1.0, 'n_estimators': 500, 'min_samples_split': 2, 'min_samples_leaf': 2, 'max_depth': 3, 'learning_rate': 0.03}"
+AdaBoost Tree,0.8252439473229298,2.101668545445065,7.777822435729868,2.7888747615713885,0.8939394355432895,"{'n_estimators': 100, 'learning_rate': 0.08, 'estimator__min_samples_leaf': 4, 'estimator__max_depth': 5}"
+Hist Gradient Boosting,0.839316023742574,2.0292567440351412,8.654726123427663,2.9418915893396993,0.8819817313323843,"{'min_samples_leaf': 20, 'max_leaf_nodes': 31, 'max_iter': 300, 'learning_rate': 0.1, 'l2_regularization': 1.0}"
+Random Forest,0.8414085779088005,1.9818088235294091,10.176527865196071,3.190067062805431,0.8612300166902878,"{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': None}"
+Extra Trees,0.8692185437381686,1.9762254901960739,10.565850553921557,3.2505154289622373,0.8559211034998371,"{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': 'sqrt', 'max_depth': None}"
+Decision Tree,0.7242240479922761,2.7315722626564205,14.839869075373082,3.852255063644291,0.7976393902530566,"{'min_samples_split': 20, 'min_samples_leaf': 6, 'max_features': None, 'max_depth': 10}"
